@@ -1,4 +1,20 @@
+# ----------------------------------------------------------
+
+# Version 1.1.0 Release Notes
+
+January 7, 2024
+
+### 1. Added Audio Books From YouTube
+
+### 2. Updated the Button and Button Hover Background Colors
+
+### 3. Updated the Sidebar with labels
+
+# ----------------------------------------------------------
+
 # Version 1.0.0 Release Notes
+
+January 7, 2024
 
 ### 1. - "Understand Dyslexia" Button
 

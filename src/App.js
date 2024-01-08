@@ -5,6 +5,7 @@ import UnderstandDyslexia from "./pages/UnderstandDyslexia";
 import HowTheFontWorks from "./pages/HowTheFontWorks";
 import MakeAPDF from "./pages/MakeAPdf";
 import MoreResources from "./pages/MoreResources";
+import AudioBooks from "./pages/AudioBooks";
 
 function App() {
   const [activeSection, setActiveSection] = useState("pdf");
@@ -16,16 +17,25 @@ function App() {
   return (
     <div className='AppContainer'>
       <div className='Sidebar'>
-        <button className='SidebarButton' onClick={() => handleButtonClick("understand")}>
+        <div>Learn More</div>
+        <button className='SidebarButtonLearnMore' onClick={() => handleButtonClick("understand")}>
           UNDERSTAND DYSLEXIA
         </button>
-        <button className='SidebarButton' onClick={() => handleButtonClick("font")}>
+        <button className='SidebarButtonLearnMore' onClick={() => handleButtonClick("font")}>
           HOW THE FONT WORKS
         </button>
-        <button className='SidebarButton' onClick={() => handleButtonClick("pdf")}>
+
+        <div>Tools</div>
+        <button className='SidebarButtonTools' onClick={() => handleButtonClick("pdf")}>
           MAKE A PDF
         </button>
-        <button className='SidebarButtonAlternate' onClick={() => handleButtonClick("resources")}>
+
+        <div>External Resources</div>
+        <button className='SidebarButtonResources' onClick={() => handleButtonClick("books")}>
+          FREE AUDIO BOOKS
+        </button>
+
+        <button className='SidebarButtonResources' onClick={() => handleButtonClick("resources")}>
           MORE RESOURCES
         </button>
       </div>
@@ -34,6 +44,8 @@ function App() {
         {activeSection === "understand" && <UnderstandDyslexia />}
         {activeSection === "font" && <HowTheFontWorks />}
         {activeSection === "pdf" && <MakeAPDF />}
+        {activeSection === "books" && <AudioBooks />}
+
         {activeSection === "resources" && <MoreResources />}
       </div>
     </div>

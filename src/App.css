@@ -13,29 +13,36 @@
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
 }
 
-.SidebarButton,
-.SidebarButtonAlternate {
+.SidebarButtonLearnMore,
+.SidebarButtonResources,
+.SidebarButtonTools {
   display: block;
   width: 100%;
   padding: 10px;
   margin-bottom: 10px;
-  background-color: #007bff;
   color: #fff;
   border: none;
   border-radius: 5px;
   cursor: pointer;
 }
 
-.SidebarButton:hover,
-.SidebarButtonAlternate:hover {
+.SidebarButtonLearnMore {
+  background-color: #007bff;
+}
+.SidebarButtonLearnMore:hover {
   background-color: #0056b3;
 }
-
-.SidebarButtonAlternate {
+.SidebarButtonResources {
   background-color: #ff9600;
 }
-.SidebarButtonAlternate:hover {
-  background-color: #e68700;
+.SidebarButtonResources:hover {
+  background-color: #c97501;
+}
+.SidebarButtonTools {
+  background-color: #58cc02;
+}
+.SidebarButtonTools:hover {
+  background-color: #48a402;
 }
 
 .MainContent {
