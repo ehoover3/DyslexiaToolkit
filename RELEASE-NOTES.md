@@ -2,7 +2,16 @@
 
 Released TBD
 
-1. Added additional audio books
+1.
+
+# ----------------------------------------------------------
+
+# Version 1.1.1 Release Notes
+
+Released January 8, 2024
+
+1. Replaced buggy PDF with image of ABC in open dyslexic font.
+2. Added additional audio books
 
 # ----------------------------------------------------------
 
