@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import jsPDF from "jspdf";
-import "./App.css";
+import "../App.css";
 
 const PdfGenerator = () => {
   const [text, setText] = useState("Enter text here");
@@ -33,7 +33,7 @@ const PdfGenerator = () => {
       y += doc.getTextDimensions(line).h + 2; // Add inter-line gap
     });
 
-    doc.save("sample.pdf");
+    doc.save("DyslexiaToolkit.pdf");
   };
 
   return (

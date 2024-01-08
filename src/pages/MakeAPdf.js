@@ -1,6 +1,6 @@
 // MakeAPDF.js
 import React from "react";
-import PdfGenerator from "../PdfGenerator";
+import PdfGenerator from "../components/PdfGenerator";
 
 const MakeAPDF = () => {
   return (

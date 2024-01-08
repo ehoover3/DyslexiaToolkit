@@ -28,14 +28,14 @@ export default function MoreResources() {
       <ol>
         <li>
           Download this font{" "}
-          <a href='https://opendyslexic.org' target='_blank'>
+          <a href='https://opendyslexic.org' target='_blank' rel='noreferrer'>
             https://opendyslexic.org
           </a>
         </li>
         <br />
         <li>
           See in this font on all websites, using a Google Chrome extension{" "}
-          <a href='https://www.helperbird.com' target='_blank'>
+          <a href='https://www.helperbird.com' target='_blank' rel='noreferrer'>
             https://www.helperbird.com
           </a>
         </li>
