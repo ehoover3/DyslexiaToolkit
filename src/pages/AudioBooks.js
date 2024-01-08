@@ -44,6 +44,13 @@ function AudioBooks() {
         </li>
 
         <li>
+          <a href='https://www.youtube.com/watch?v=Ovz9VspYOxY' target='_blank' rel='noreferrer'>
+            Atlas of the Heart
+          </a>{" "}
+          by Brene Brown
+        </li>
+
+        <li>
           <a href='https://www.youtube.com/watch?v=bG5QixsoPok' target='_blank' rel='noreferrer'>
             Fahrenheit 451
           </a>{" "}
@@ -62,6 +69,13 @@ function AudioBooks() {
             Harry Potter and the Sorcerer's Stone
           </a>{" "}
           by J.K. Rowling
+        </li>
+
+        <li>
+          <a href='https://www.youtube.com/watch?v=YKAfKprBXQc' target='_blank' rel='noreferrer'>
+            How To Win Friends And Influence People
+          </a>{" "}
+          by Dale Carnegie
         </li>
 
         <li>

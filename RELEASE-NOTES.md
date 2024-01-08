@@ -1,37 +1,43 @@
+# Version 1.2.0 Release Notes
+
+Released TBD
+
+1. Added additional audio books
+
 # ----------------------------------------------------------
 
 # Version 1.1.0 Release Notes
 
-January 7, 2024
+Released January 7, 2024
 
-### 1. Added Audio Books From YouTube
+1.  Added Audio Books From YouTube
 
-### 2. Updated the Button and Button Hover Background Colors
+2.  Updated the Button and Button Hover Background Colors
 
-### 3. Updated the Sidebar with labels
+3.  Updated the Sidebar with labels
 
 # ----------------------------------------------------------
 
 # Version 1.0.0 Release Notes
 
-January 7, 2024
+Released January 7, 2024
 
-### 1. - "Understand Dyslexia" Button
+1.  "Understand Dyslexia" Button
 
 - "Understand Dyslexia" button shows gifs of how dyslexic minds rotate objects and letters.
 
-### 2. "How The Font Works" Button
+2.  "How The Font Works" Button
 
-- - "How The Font Works" button shows the Open Dyslexic Font.
+- "How The Font Works" button shows the Open Dyslexic Font.
 
-### 3. "Make A PDF" Button
+3.  "Make A PDF" Button
 
 - "Make A PDF" button allows the user to create a pdf with dyslexic friendly font
 
-### 4. "More Resources" Button
+4.  "More Resources" Button
 
 - "More Resources" button includes a legal disclaimer and links to the open dyslexic font and helper bird websites.
 
-### 5. Favicon
+5.  Favicon
 
 - Favicon is updated to a book image.
