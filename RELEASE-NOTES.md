@@ -1,8 +1,8 @@
 # Version 1.2.0 Release Notes
 
-Released TBD
+Released January 8, 2024
 
-1.
+1. Updated styling with Material UI
 
 # ----------------------------------------------------------
 

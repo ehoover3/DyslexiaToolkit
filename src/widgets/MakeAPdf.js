@@ -1,14 +1,11 @@
-// MakeAPDF.js
-import React from "react";
+import * as React from "react";
 import PdfGenerator from "../components/PdfGenerator";
 
-const MakeAPDF = () => {
+export default function MakeAPdf() {
   return (
-    <div>
+    <React.Fragment>
       <h2>Make a Dyslexic Friendly Font PDF</h2>
       <PdfGenerator />
-    </div>
+    </React.Fragment>
   );
-};
-
-export default MakeAPDF;
+}

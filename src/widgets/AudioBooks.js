@@ -1,8 +1,8 @@
-import React from "react";
+import * as React from "react";
 
-function AudioBooks() {
+export default function AudioBooks() {
   return (
-    <div>
+    <React.Fragment>
       <h1>Disclaimer </h1>
 
       <ol>
@@ -169,8 +169,6 @@ function AudioBooks() {
           by Harper Lee
         </li>
       </ol>
-    </div>
+    </React.Fragment>
   );
 }
-
-export default AudioBooks;

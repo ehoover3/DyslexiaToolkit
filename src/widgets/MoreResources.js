@@ -1,8 +1,8 @@
-import React from "react";
+import * as React from "react";
 
 export default function MoreResources() {
   return (
-    <div>
+    <React.Fragment>
       <h1>Disclaimer </h1>
 
       <ol>
@@ -40,6 +40,6 @@ export default function MoreResources() {
           </a>
         </li>
       </ol>
-    </div>
+    </React.Fragment>
   );
 }
