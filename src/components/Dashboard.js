@@ -3,7 +3,6 @@ import { styled, createTheme, ThemeProvider } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import MuiDrawer from "@mui/material/Drawer";
 import Box from "@mui/material/Box";
-import MuiAppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import List from "@mui/material/List";
 import Typography from "@mui/material/Typography";
@@ -26,6 +25,16 @@ import AutoStoriesIcon from "@mui/icons-material/AutoStories";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import AudioBooks from "../widgets/AudioBooks";
 import MoreResources from "../widgets/MoreResources";
+
+const defaultTheme = createTheme();
+
+// const theme = createTheme({
+//   palette: {
+//     primary: "#1976d2",
+//     secondary: "#9c27b0",
+//   },
+// });
+
 function Copyright(props) {
   return (
     <Typography variant='body2' color='text.secondary' align='center' {...props}>
@@ -35,24 +44,6 @@ function Copyright(props) {
 }
 
 const drawerWidth = 240;
-
-const AppBar = styled(MuiAppBar, {
-  shouldForwardProp: (prop) => prop !== "open",
-})(({ theme, open }) => ({
-  zIndex: theme.zIndex.drawer + 1,
-  transition: theme.transitions.create(["width", "margin"], {
-    easing: theme.transitions.easing.sharp,
-    duration: theme.transitions.duration.leavingScreen,
-  }),
-  ...(open && {
-    marginLeft: drawerWidth,
-    width: `calc(100% - ${drawerWidth}px)`,
-    transition: theme.transitions.create(["width", "margin"], {
-      easing: theme.transitions.easing.sharp,
-      duration: theme.transitions.duration.enteringScreen,
-    }),
-  }),
-}));
 
 const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== "open" })(({ theme, open }) => ({
   "& .MuiDrawer-paper": {
@@ -78,9 +69,6 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== "open" 
   },
 }));
 
-// TODO remove, this demo shouldn't need to reset the theme.
-const defaultTheme = createTheme();
-
 export default function Dashboard() {
   const [activeSection, setActiveSection] = React.useState("pdf");
 
@@ -97,69 +85,80 @@ export default function Dashboard() {
     <ThemeProvider theme={defaultTheme}>
       <Box sx={{ display: "flex" }}>
         <CssBaseline />
-        <AppBar position='absolute' open={open}>
-          <Toolbar
-            sx={{
-              pr: "24px", // keep right padding when drawer closed
-            }}>
-            <IconButton
-              edge='start'
-              color='inherit'
-              aria-label='open drawer'
-              onClick={toggleDrawer}
-              sx={{
-                marginRight: "36px",
-                ...(open && { display: "none" }),
-              }}>
-              <MenuIcon />
-            </IconButton>
-            {/* <Typography component='h1' variant='h6' color='inherit' noWrap sx={{ flexGrow: 1 }}> */}
-            <div style={{ fontSize: "32px" }}>Dyslexia Toolkit</div>
-            {/* </Typography> */}
-          </Toolbar>
-        </AppBar>
+
         <Drawer variant='permanent' open={open}>
-          <Toolbar
-            sx={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "flex-end",
-              px: [1],
-            }}>
-            <IconButton onClick={toggleDrawer}>
-              <ChevronLeftIcon />
-            </IconButton>
-          </Toolbar>
+          {open ? (
+            <Toolbar
+              sx={{
+                color: "white",
+                backgroundColor: "primary.main",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "flex-end",
+                px: [1],
+              }}
+              id='title'>
+              DYSLEXIA TOOLKIT
+              <IconButton onClick={toggleDrawer}>
+                <ChevronLeftIcon
+                  sx={{
+                    color: "white",
+                  }}
+                />
+              </IconButton>
+            </Toolbar>
+          ) : (
+            <Toolbar
+              sx={{
+                backgroundColor: "primary.main",
+                pr: "24px", // keep right padding when drawer closed
+              }}>
+              <IconButton
+                edge='start'
+                // color='inherit'
+                aria-label='open drawer'
+                onClick={toggleDrawer}
+                sx={{
+                  color: "white",
+
+                  marginRight: "36px",
+                  ...(open && { display: "none" }),
+                }}>
+                <MenuIcon />
+              </IconButton>
+            </Toolbar>
+          )}
           <Divider />
-          <List component='nav'>
+          <List component='nav' sx={{ backgroundColor: "primary.main", height: "100%", color: "white" }}>
+            {/* <img src='./images/logo.png' alt='logo' style={{ padding: "15px", width: "100%" }} /> */}
             <ListItemButton onClick={() => handleButtonClick("understand")}>
-              <ListItemIcon>
+              <ListItemIcon sx={{ color: "white" }}>
                 <LightbulbIcon />
               </ListItemIcon>
-
               <div>Dyslexia Intro</div>
             </ListItemButton>
             <ListItemButton onClick={() => handleButtonClick("font")}>
-              <ListItemIcon>
+              <ListItemIcon sx={{ color: "white" }}>
                 <HdrAutoIcon />
               </ListItemIcon>
               <div>Dyslexic Font</div>
             </ListItemButton>
             <ListItemButton onClick={() => handleButtonClick("pdf")}>
-              <ListItemIcon>
+              <ListItemIcon sx={{ color: "white" }}>
                 <PictureAsPdfIcon />
               </ListItemIcon>
               <div>Make a PDF</div>
             </ListItemButton>
+
             <Divider sx={{ my: 1 }} />
             <ListItemButton onClick={() => handleButtonClick("books")}>
-              <ListItemIcon>
+              <ListItemIcon sx={{ color: "white" }}>
                 <AutoStoriesIcon />
               </ListItemIcon>
               <div>Free Audio Books</div>
             </ListItemButton>
             <ListItemButton onClick={() => handleButtonClick("resources")}>
-              <ListItemIcon>
+              <ListItemIcon sx={{ color: "white" }}>
                 <CheckCircleIcon />
               </ListItemIcon>
               <div>More Resources</div>
@@ -175,10 +174,9 @@ export default function Dashboard() {
             overflow: "auto",
           }}>
           <Toolbar />
+
           <Container maxWidth='lg' sx={{ mt: 4, mb: 4 }}>
             <Grid container spacing={3}>
-              {/* Understand Dyslexia */}
-
               {activeSection === "understand" && (
                 <Grid item xs={12}>
                   <Paper
