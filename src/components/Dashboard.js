@@ -98,7 +98,6 @@ export default function Dashboard() {
                 px: [1],
               }}
               id='title'>
-              DYSLEXIA TOOLKIT
               <IconButton onClick={toggleDrawer}>
                 <ChevronLeftIcon
                   sx={{
@@ -130,38 +129,38 @@ export default function Dashboard() {
           )}
           <Divider />
           <List component='nav' sx={{ backgroundColor: "primary.main", height: "100%", color: "white" }}>
-            {/* <img src='./images/logo.png' alt='logo' style={{ padding: "15px", width: "100%" }} /> */}
+            {open ? <img src='./images/logo.png' alt='logo' style={{ padding: "15px", width: "100%" }} /> : <div></div>}
             <ListItemButton onClick={() => handleButtonClick("understand")}>
               <ListItemIcon sx={{ color: "white" }}>
                 <LightbulbIcon />
               </ListItemIcon>
-              <div>Dyslexia Intro</div>
+              {open ? <div>Dyslexia Intro</div> : <div></div>}
             </ListItemButton>
             <ListItemButton onClick={() => handleButtonClick("font")}>
               <ListItemIcon sx={{ color: "white" }}>
                 <HdrAutoIcon />
               </ListItemIcon>
-              <div>Dyslexic Font</div>
+              {open ? <div>Dyslexic Font</div> : <div></div>}
             </ListItemButton>
             <ListItemButton onClick={() => handleButtonClick("pdf")}>
               <ListItemIcon sx={{ color: "white" }}>
                 <PictureAsPdfIcon />
               </ListItemIcon>
-              <div>Make a PDF</div>
+              {open ? <div>Make a PDF</div> : <div></div>}
             </ListItemButton>
 
-            <Divider sx={{ my: 1 }} />
             <ListItemButton onClick={() => handleButtonClick("books")}>
               <ListItemIcon sx={{ color: "white" }}>
                 <AutoStoriesIcon />
               </ListItemIcon>
-              <div>Free Audio Books</div>
+
+              {open ? <div>Free Audio Books</div> : <div></div>}
             </ListItemButton>
             <ListItemButton onClick={() => handleButtonClick("resources")}>
               <ListItemIcon sx={{ color: "white" }}>
                 <CheckCircleIcon />
               </ListItemIcon>
-              <div>More Resources</div>
+              {open ? <div>More Resources</div> : <div></div>}
             </ListItemButton>
           </List>
         </Drawer>

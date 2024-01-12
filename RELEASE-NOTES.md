@@ -1,3 +1,12 @@
+# Version 1.3.0 Release Notes
+
+Released January 10, 2024
+
+1. Updated styling colors to make sidebar background color blue
+2. Removed top bar
+
+# ----------------------------------------------------------
+
 # Version 1.2.0 Release Notes
 
 Released January 8, 2024
