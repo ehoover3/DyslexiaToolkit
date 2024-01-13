@@ -1,3 +1,12 @@
+# Version 1.4.0 Release Notes
+
+Released January 13, 2024
+
+1. Refactored code
+2. Updated sidebar css
+
+# ----------------------------------------------------------
+
 # Version 1.3.0 Release Notes
 
 Released January 12, 2024

@@ -107,7 +107,7 @@ export default function Dashboard() {
         <Drawer variant='permanent' open={open}>
           <List component='nav' sx={{ backgroundColor: "primary.main", height: "100%", color: "white" }}>
             {open ? (
-              <div id='logo' onClick={toggleDrawer}>
+              <div id='logo' onClick={toggleDrawer} style={{ cursor: "pointer" }}>
                 <IconButton sx={{ color: "white" }} style={{ position: "absolute", left: "200px" }}>
                   <ChevronLeftIcon />
                 </IconButton>
