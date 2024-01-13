@@ -1,33 +1,30 @@
 import * as React from "react";
-import { styled, createTheme, ThemeProvider } from "@mui/material/styles";
-import CssBaseline from "@mui/material/CssBaseline";
-import MuiDrawer from "@mui/material/Drawer";
+import { createTheme, styled, ThemeProvider } from "@mui/material/styles";
+import { indigo } from "@mui/material/colors";
+import AudioBooks from "../widgets/AudioBooks";
+import AutoStoriesIcon from "@mui/icons-material/AutoStories";
 import Box from "@mui/material/Box";
-import Toolbar from "@mui/material/Toolbar";
-import List from "@mui/material/List";
-import Typography from "@mui/material/Typography";
-import Divider from "@mui/material/Divider";
-import IconButton from "@mui/material/IconButton";
-import Container from "@mui/material/Container";
-import Grid from "@mui/material/Grid";
-import Paper from "@mui/material/Paper";
-import MenuIcon from "@mui/icons-material/Menu";
+import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
+import Container from "@mui/material/Container";
+import CssBaseline from "@mui/material/CssBaseline";
 import DyslexiaIntro from "../widgets/DyslexiaIntro";
-import MakeAPdf from "../widgets/MakeAPdf";
+import Grid from "@mui/material/Grid";
+import HdrAutoIcon from "@mui/icons-material/HdrAuto";
 import HowTheFontWorks from "../widgets/HowTheFontWorks";
+import IconButton from "@mui/material/IconButton";
+import LightbulbIcon from "@mui/icons-material/Lightbulb";
+import List from "@mui/material/List";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
-import LightbulbIcon from "@mui/icons-material/Lightbulb";
-import HdrAutoIcon from "@mui/icons-material/HdrAuto";
-import PictureAsPdfIcon from "@mui/icons-material/PictureAsPdf";
-import AutoStoriesIcon from "@mui/icons-material/AutoStories";
-import CheckCircleIcon from "@mui/icons-material/CheckCircle";
-import AudioBooks from "../widgets/AudioBooks";
+import MakeAPdf from "../widgets/MakeAPdf";
+import MenuIcon from "@mui/icons-material/Menu";
 import MoreResources from "../widgets/MoreResources";
-import { indigo } from "@mui/material/colors";
-
-// const defaultTheme = createTheme();
+import MuiDrawer from "@mui/material/Drawer";
+import Paper from "@mui/material/Paper";
+import PictureAsPdfIcon from "@mui/icons-material/PictureAsPdf";
+import Toolbar from "@mui/material/Toolbar";
+import Typography from "@mui/material/Typography";
 
 const theme = createTheme({
   palette: {
@@ -75,141 +72,77 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== "open" 
 }));
 
 export default function Dashboard() {
-  const [activeSection, setActiveSection] = React.useState("pdf");
+  const [activeSection, setActiveSection] = React.useState("MakeAPDF");
+  const [open, setOpen] = React.useState(true);
 
-  const handleButtonClick = (section) => {
-    setActiveSection(section);
+  const buttonOnHover = {
+    "&:hover": {
+      backgroundColor: theme.palette.secondary.main,
+    },
   };
 
-  const [open, setOpen] = React.useState(true);
   const toggleDrawer = () => {
     setOpen(!open);
   };
+
+  function ListItem({ text, handleClick, icon }) {
+    return (
+      <ListItemButton onClick={() => setActiveSection(handleClick)} sx={buttonOnHover}>
+        <ListItemIcon sx={{ color: "white" }} style={{ position: "relative", left: "4.5px" }}>
+          {icon}
+        </ListItemIcon>
+        {open ? <div>{text}</div> : <div></div>}
+      </ListItemButton>
+    );
+  }
 
   return (
     <ThemeProvider theme={theme}>
       <Box sx={{ display: "flex" }}>
         <CssBaseline />
 
+        {/*  */}
+        {/* Sidebar */}
+        {/*  */}
         <Drawer variant='permanent' open={open}>
-          {open ? (
-            <Toolbar
-              sx={{
-                color: "white",
-                backgroundColor: "primary.main",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "flex-end",
-                px: [1],
-
-                "&:hover": {
-                  backgroundColor: theme.palette.secondary.main,
-                },
-              }}
-              id='title'>
-              <IconButton onClick={toggleDrawer}>
-                <ChevronLeftIcon
+          <List component='nav' sx={{ backgroundColor: "primary.main", height: "100%", color: "white" }}>
+            {open ? (
+              <div id='logo' onClick={toggleDrawer}>
+                <IconButton sx={{ color: "white" }} style={{ position: "absolute", left: "200px" }}>
+                  <ChevronLeftIcon />
+                </IconButton>
+                <img src='./images/logo.png' alt='logo' style={{ padding: "15px", width: "100%" }} />
+              </div>
+            ) : (
+              <Toolbar
+                sx={{
+                  backgroundColor: "primary.main",
+                  pr: "24px", // keep right padding when drawer closed
+                  ...buttonOnHover,
+                }}>
+                <IconButton
+                  edge='start'
+                  aria-label='open drawer'
+                  onClick={toggleDrawer}
                   sx={{
                     color: "white",
-                  }}
-                />
-              </IconButton>
-            </Toolbar>
-          ) : (
-            <Toolbar
-              sx={{
-                backgroundColor: "primary.main",
-                pr: "24px", // keep right padding when drawer closed
-
-                "&:hover": {
-                  backgroundColor: theme.palette.secondary.main,
-                },
-              }}>
-              <IconButton
-                edge='start'
-                // color='inherit'
-                aria-label='open drawer'
-                onClick={toggleDrawer}
-                sx={{
-                  color: "white",
-
-                  marginRight: "36px",
-                  ...(open && { display: "none" }),
-                }}>
-                <MenuIcon />
-              </IconButton>
-            </Toolbar>
-          )}
-          <Divider />
-          <List component='nav' sx={{ backgroundColor: "primary.main", height: "100%", color: "white" }}>
-            {open ? <img src='./images/logo.png' alt='logo' style={{ padding: "15px", width: "100%" }} /> : <div></div>}
-
-            <ListItemButton
-              onClick={() => handleButtonClick("understand")}
-              sx={{
-                "&:hover": {
-                  backgroundColor: theme.palette.secondary.main,
-                },
-              }}>
-              <ListItemIcon sx={{ color: "white" }}>
-                <LightbulbIcon />
-              </ListItemIcon>
-              {open ? <div>Dyslexia Intro</div> : <div></div>}
-            </ListItemButton>
-
-            <ListItemButton
-              onClick={() => handleButtonClick("font")}
-              sx={{
-                "&:hover": {
-                  backgroundColor: theme.palette.secondary.main,
-                },
-              }}>
-              <ListItemIcon sx={{ color: "white" }}>
-                <HdrAutoIcon />
-              </ListItemIcon>
-              {open ? <div>Dyslexic Font</div> : <div></div>}
-            </ListItemButton>
-
-            <ListItemButton
-              onClick={() => handleButtonClick("pdf")}
-              sx={{
-                "&:hover": {
-                  backgroundColor: theme.palette.secondary.main,
-                },
-              }}>
-              <ListItemIcon sx={{ color: "white" }}>
-                <PictureAsPdfIcon />
-              </ListItemIcon>
-              {open ? <div>Make a PDF</div> : <div></div>}
-            </ListItemButton>
-
-            <ListItemButton
-              onClick={() => handleButtonClick("books")}
-              sx={{
-                "&:hover": {
-                  backgroundColor: theme.palette.secondary.main,
-                },
-              }}>
-              <ListItemIcon sx={{ color: "white" }}>
-                <AutoStoriesIcon />
-              </ListItemIcon>
-              {open ? <div>Free Audio Books</div> : <div></div>}
-            </ListItemButton>
-
-            <ListItemButton
-              onClick={() => handleButtonClick("resources")}
-              sx={{
-                "&:hover": {
-                  backgroundColor: theme.palette.secondary.main,
-                },
-              }}>
-              <ListItemIcon sx={{ color: "white" }}>
-                <CheckCircleIcon />
-              </ListItemIcon>
-              {open ? <div>More Resources</div> : <div></div>}
-            </ListItemButton>
+                    marginRight: "36px",
+                    ...(open && { display: "none" }),
+                  }}>
+                  <MenuIcon />
+                </IconButton>
+              </Toolbar>
+            )}
+            <ListItem text='Dyslexia Intro' handleClick='DyslexiaIntro' icon={<LightbulbIcon />} />
+            <ListItem text='Dyslexic Font' handleClick='DyslexicFont' icon={<HdrAutoIcon />} />
+            <ListItem text='Make a PDF' handleClick='MakeAPDF' icon={<PictureAsPdfIcon />} />
+            <ListItem text='Free Audio Books' handleClick='FreeAudioBooks' icon={<AutoStoriesIcon />} />
+            <ListItem text='More Resources' handleClick='MoreResources' icon={<CheckCircleIcon />} />
           </List>
         </Drawer>
+        {/*  */}
+        {/* MAIN */}
+        {/*  */}
         <Box
           component='main'
           sx={{
@@ -218,11 +151,9 @@ export default function Dashboard() {
             height: "100vh",
             overflow: "auto",
           }}>
-          <Toolbar />
-
           <Container maxWidth='lg' sx={{ mt: 4, mb: 4 }}>
             <Grid container spacing={3}>
-              {activeSection === "understand" && (
+              {activeSection === "DyslexiaIntro" && (
                 <Grid item xs={12}>
                   <Paper
                     sx={{
@@ -235,8 +166,7 @@ export default function Dashboard() {
                 </Grid>
               )}
 
-              {/* How The Font Works */}
-              {activeSection === "font" && (
+              {activeSection === "DyslexicFont" && (
                 <Grid item xs={12}>
                   <Paper sx={{ p: 2, display: "flex", flexDirection: "column" }}>
                     <HowTheFontWorks />
@@ -244,8 +174,7 @@ export default function Dashboard() {
                 </Grid>
               )}
 
-              {/* Make A PDF */}
-              {activeSection === "pdf" && (
+              {activeSection === "MakeAPDF" && (
                 <Grid item xs={12}>
                   <Paper
                     sx={{
@@ -257,7 +186,8 @@ export default function Dashboard() {
                   </Paper>
                 </Grid>
               )}
-              {activeSection === "books" && (
+
+              {activeSection === "FreeAudioBooks" && (
                 <Grid item xs={12}>
                   <Paper sx={{ p: 2, display: "flex", flexDirection: "column" }}>
                     <AudioBooks />
@@ -265,7 +195,7 @@ export default function Dashboard() {
                 </Grid>
               )}
 
-              {activeSection === "resources" && (
+              {activeSection === "MoreResources" && (
                 <Grid item xs={12}>
                   <Paper sx={{ p: 2, display: "flex", flexDirection: "column" }}>
                     <MoreResources />

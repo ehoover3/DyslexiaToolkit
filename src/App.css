@@ -2,6 +2,10 @@
   font-family: "OpenDyslexic-Bold", sans-serif;
 }
 
+#logo:hover {
+  background-color: #3f51b5;
+}
+
 .AppContainer {
   display: flex;
   max-width: 1200px;

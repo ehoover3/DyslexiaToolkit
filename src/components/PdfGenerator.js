@@ -38,7 +38,7 @@ const PdfGenerator = () => {
 
   return (
     <div className='TextAreaButtonContainer'>
-      <textarea id='TextArea' value={text} onChange={handleInputChange} className='text-input' style={{ color: "white", background: "black" }} />
+      <textarea id='TextArea' value={text} onChange={handleInputChange} className='text-input' style={{ color: "black", background: "#fafafa" }} />
 
       <button onClick={generatePDF} className='Button'>
         Generate PDF
