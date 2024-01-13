@@ -1,3 +1,5 @@
+# 1. Center the icons when the sidebar is closed
+
 # 1. Upgrade Audio Books
 
 - Sort by Title

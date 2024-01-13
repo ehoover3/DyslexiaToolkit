@@ -25,20 +25,25 @@ import AutoStoriesIcon from "@mui/icons-material/AutoStories";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import AudioBooks from "../widgets/AudioBooks";
 import MoreResources from "../widgets/MoreResources";
+import { indigo } from "@mui/material/colors";
 
-const defaultTheme = createTheme();
+// const defaultTheme = createTheme();
 
-// const theme = createTheme({
-//   palette: {
-//     primary: "#1976d2",
-//     secondary: "#9c27b0",
-//   },
-// });
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: indigo[800],
+    },
+    secondary: {
+      main: indigo[500],
+    },
+  },
+});
 
 function Copyright(props) {
   return (
     <Typography variant='body2' color='text.secondary' align='center' {...props}>
-      <div color='inherit'>Copyright © Dyslexia Toolkit {new Date().getFullYear()}</div>
+      Copyright © Dyslexia Toolkit {new Date().getFullYear()}
     </Typography>
   );
 }
@@ -82,7 +87,7 @@ export default function Dashboard() {
   };
 
   return (
-    <ThemeProvider theme={defaultTheme}>
+    <ThemeProvider theme={theme}>
       <Box sx={{ display: "flex" }}>
         <CssBaseline />
 
@@ -96,6 +101,10 @@ export default function Dashboard() {
                 alignItems: "center",
                 justifyContent: "flex-end",
                 px: [1],
+
+                "&:hover": {
+                  backgroundColor: theme.palette.secondary.main,
+                },
               }}
               id='title'>
               <IconButton onClick={toggleDrawer}>
@@ -111,6 +120,10 @@ export default function Dashboard() {
               sx={{
                 backgroundColor: "primary.main",
                 pr: "24px", // keep right padding when drawer closed
+
+                "&:hover": {
+                  backgroundColor: theme.palette.secondary.main,
+                },
               }}>
               <IconButton
                 edge='start'
@@ -130,33 +143,66 @@ export default function Dashboard() {
           <Divider />
           <List component='nav' sx={{ backgroundColor: "primary.main", height: "100%", color: "white" }}>
             {open ? <img src='./images/logo.png' alt='logo' style={{ padding: "15px", width: "100%" }} /> : <div></div>}
-            <ListItemButton onClick={() => handleButtonClick("understand")}>
+
+            <ListItemButton
+              onClick={() => handleButtonClick("understand")}
+              sx={{
+                "&:hover": {
+                  backgroundColor: theme.palette.secondary.main,
+                },
+              }}>
               <ListItemIcon sx={{ color: "white" }}>
                 <LightbulbIcon />
               </ListItemIcon>
               {open ? <div>Dyslexia Intro</div> : <div></div>}
             </ListItemButton>
-            <ListItemButton onClick={() => handleButtonClick("font")}>
+
+            <ListItemButton
+              onClick={() => handleButtonClick("font")}
+              sx={{
+                "&:hover": {
+                  backgroundColor: theme.palette.secondary.main,
+                },
+              }}>
               <ListItemIcon sx={{ color: "white" }}>
                 <HdrAutoIcon />
               </ListItemIcon>
               {open ? <div>Dyslexic Font</div> : <div></div>}
             </ListItemButton>
-            <ListItemButton onClick={() => handleButtonClick("pdf")}>
+
+            <ListItemButton
+              onClick={() => handleButtonClick("pdf")}
+              sx={{
+                "&:hover": {
+                  backgroundColor: theme.palette.secondary.main,
+                },
+              }}>
               <ListItemIcon sx={{ color: "white" }}>
                 <PictureAsPdfIcon />
               </ListItemIcon>
               {open ? <div>Make a PDF</div> : <div></div>}
             </ListItemButton>
 
-            <ListItemButton onClick={() => handleButtonClick("books")}>
+            <ListItemButton
+              onClick={() => handleButtonClick("books")}
+              sx={{
+                "&:hover": {
+                  backgroundColor: theme.palette.secondary.main,
+                },
+              }}>
               <ListItemIcon sx={{ color: "white" }}>
                 <AutoStoriesIcon />
               </ListItemIcon>
-
               {open ? <div>Free Audio Books</div> : <div></div>}
             </ListItemButton>
-            <ListItemButton onClick={() => handleButtonClick("resources")}>
+
+            <ListItemButton
+              onClick={() => handleButtonClick("resources")}
+              sx={{
+                "&:hover": {
+                  backgroundColor: theme.palette.secondary.main,
+                },
+              }}>
               <ListItemIcon sx={{ color: "white" }}>
                 <CheckCircleIcon />
               </ListItemIcon>

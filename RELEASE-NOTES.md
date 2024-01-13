@@ -1,5 +1,12 @@
 # Version 1.3.0 Release Notes
 
+Released January 12, 2024
+
+1. Added Logo Image
+2. Updated button colors and onhover colors
+
+# ----------------------------------------------------------
+
 Released January 10, 2024
 
 1. Updated styling colors to make sidebar background color blue
