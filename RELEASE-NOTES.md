@@ -1,3 +1,10 @@
+# Version 1.5.0 Release Notes
+
+Released January 13, 2024
+
+1. Improved "How It Works" content
+2. Updated gifs to remove black end screen
+
 # Version 1.4.0 Release Notes
 
 Released January 13, 2024

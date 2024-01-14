@@ -8,21 +8,23 @@ import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import Container from "@mui/material/Container";
 import CssBaseline from "@mui/material/CssBaseline";
-import DyslexiaIntro from "../widgets/DyslexiaIntro";
+import HowItWorks from "../widgets/RotationGifs";
 import Grid from "@mui/material/Grid";
+import HelperBird from "../widgets/HelperBird";
 import HdrAutoIcon from "@mui/icons-material/HdrAuto";
-import HowTheFontWorks from "../widgets/HowTheFontWorks";
+import DyslexicFont from "../widgets/OpenDyslexicFont";
 import IconButton from "@mui/material/IconButton";
 import LightbulbIcon from "@mui/icons-material/Lightbulb";
 import List from "@mui/material/List";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
-import MakeAPdf from "../widgets/MakeAPdf";
+import PdfMaker from "../widgets/PdfMaker";
 import MenuIcon from "@mui/icons-material/Menu";
-import MoreResources from "../widgets/MoreResources";
+import MoreResources from "../widgets/Ideas";
 import MuiDrawer from "@mui/material/Drawer";
 import Paper from "@mui/material/Paper";
 import PictureAsPdfIcon from "@mui/icons-material/PictureAsPdf";
+import Simulation from "../widgets/Simulation";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 
@@ -72,7 +74,7 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== "open" 
 }));
 
 export default function Dashboard() {
-  const [activeSection, setActiveSection] = React.useState("MakeAPDF");
+  const [activeSection, setActiveSection] = React.useState("PdfMaker");
   const [open, setOpen] = React.useState(true);
 
   const buttonOnHover = {
@@ -133,13 +135,14 @@ export default function Dashboard() {
                 </IconButton>
               </Toolbar>
             )}
-            <ListItem text='Dyslexia Intro' handleClick='DyslexiaIntro' icon={<LightbulbIcon />} />
-            <ListItem text='Dyslexic Font' handleClick='DyslexicFont' icon={<HdrAutoIcon />} />
-            <ListItem text='Make a PDF' handleClick='MakeAPDF' icon={<PictureAsPdfIcon />} />
-            <ListItem text='Free Audio Books' handleClick='FreeAudioBooks' icon={<AutoStoriesIcon />} />
-            <ListItem text='More Resources' handleClick='MoreResources' icon={<CheckCircleIcon />} />
+            <ListItem text='How It Works' handleClick='HowItWorks' icon={<CheckCircleIcon />} />
+            <ListItem text='Reading Tools' handleClick='ReadingTools' icon={<HdrAutoIcon />} />
+            <ListItem text='PDF Tools' handleClick='PdfMaker' icon={<PictureAsPdfIcon />} />
+            <ListItem text='Audio Books' handleClick='AudioBooks' icon={<AutoStoriesIcon />} />
+            <ListItem text='Future Ideas' handleClick='Ideas' icon={<LightbulbIcon />} />
           </List>
         </Drawer>
+
         {/*  */}
         {/* MAIN */}
         {/*  */}
@@ -153,7 +156,7 @@ export default function Dashboard() {
           }}>
           <Container maxWidth='lg' sx={{ mt: 4, mb: 4 }}>
             <Grid container spacing={3}>
-              {activeSection === "DyslexiaIntro" && (
+              {activeSection === "HowItWorks" && (
                 <Grid item xs={12}>
                   <Paper
                     sx={{
@@ -161,20 +164,33 @@ export default function Dashboard() {
                       display: "flex",
                       flexDirection: "column",
                     }}>
-                    <DyslexiaIntro />
+                    <HowItWorks />
+                  </Paper>
+                  <br />
+                  <Paper
+                    sx={{
+                      p: 2,
+                      display: "flex",
+                      flexDirection: "column",
+                    }}>
+                    <Simulation />
                   </Paper>
                 </Grid>
               )}
 
-              {activeSection === "DyslexicFont" && (
+              {activeSection === "ReadingTools" && (
                 <Grid item xs={12}>
                   <Paper sx={{ p: 2, display: "flex", flexDirection: "column" }}>
-                    <HowTheFontWorks />
+                    <DyslexicFont />
+                  </Paper>
+                  <br />
+                  <Paper sx={{ p: 2, display: "flex", flexDirection: "column" }}>
+                    <HelperBird />
                   </Paper>
                 </Grid>
               )}
 
-              {activeSection === "MakeAPDF" && (
+              {activeSection === "PdfMaker" && (
                 <Grid item xs={12}>
                   <Paper
                     sx={{
@@ -182,12 +198,12 @@ export default function Dashboard() {
                       display: "flex",
                       flexDirection: "column",
                     }}>
-                    <MakeAPdf />
+                    <PdfMaker />
                   </Paper>
                 </Grid>
               )}
 
-              {activeSection === "FreeAudioBooks" && (
+              {activeSection === "AudioBooks" && (
                 <Grid item xs={12}>
                   <Paper sx={{ p: 2, display: "flex", flexDirection: "column" }}>
                     <AudioBooks />
@@ -195,7 +211,7 @@ export default function Dashboard() {
                 </Grid>
               )}
 
-              {activeSection === "MoreResources" && (
+              {activeSection === "Ideas" && (
                 <Grid item xs={12}>
                   <Paper sx={{ p: 2, display: "flex", flexDirection: "column" }}>
                     <MoreResources />
