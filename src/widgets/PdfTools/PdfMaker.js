@@ -1,5 +1,5 @@
 import * as React from "react";
-import PdfGenerator from "../components/PdfGenerator";
+import PdfGenerator from "../../components/PdfGenerator";
 
 export default function PdfMaker() {
   return (
