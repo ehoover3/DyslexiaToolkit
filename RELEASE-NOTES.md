@@ -1,9 +1,28 @@
+# Version 1.7.0 Release Notes
+
+Released January 14, 2024
+
+1. Added sort by author & title buttons to audio books
+
+# ----------------------------------------------------------
+
+# Version 1.6.0 Release Notes
+
+Released January 14, 2024
+
+1. Updated content
+2. Added audio books - now there are 100 books
+
+# ----------------------------------------------------------
+
 # Version 1.5.0 Release Notes
 
 Released January 13, 2024
 
 1. Improved "How It Works" content
 2. Updated gifs to remove black end screen
+
+# ----------------------------------------------------------
 
 # Version 1.4.0 Release Notes
 
