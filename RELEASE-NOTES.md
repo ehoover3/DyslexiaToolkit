@@ -2,7 +2,8 @@
 
 Released January 18, 2024
 
-1. Added screen readers
+1. Added screen readers widget
+2. Made reading tools the default page
 
 # ----------------------------------------------------------
 

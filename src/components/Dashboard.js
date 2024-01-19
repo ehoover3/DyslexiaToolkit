@@ -167,6 +167,7 @@ export default function Dashboard() {
             <Grid container spacing={3}>
               {activeSection === "HowItWorks" && (
                 <Grid item xs={12}>
+                  <h1>How Dyslexia Works</h1>
                   <Paper
                     sx={{
                       p: 2,
@@ -189,6 +190,7 @@ export default function Dashboard() {
 
               {activeSection === "ReadingTools" && (
                 <Grid item xs={12}>
+                  <h1>Reading Tools</h1>
                   <Paper sx={{ p: 2, display: "flex", flexDirection: "column" }}>
                     <DyslexicFont />
                   </Paper>
@@ -205,6 +207,7 @@ export default function Dashboard() {
 
               {activeSection === "PdfMaker" && (
                 <Grid item xs={12}>
+                  <h1>PDF Tools</h1>
                   <Paper
                     sx={{
                       p: 2,
@@ -218,6 +221,7 @@ export default function Dashboard() {
 
               {activeSection === "AudioBooks" && (
                 <Grid item xs={12}>
+                  <h1>Audio Books</h1>
                   <Paper sx={{ p: 2, display: "flex", flexDirection: "column" }}>
                     <AudioBooks />
                   </Paper>
@@ -226,6 +230,7 @@ export default function Dashboard() {
 
               {activeSection === "Ideas" && (
                 <Grid item xs={12}>
+                  <h1>Future Ideas</h1>
                   <Paper sx={{ p: 2, display: "flex", flexDirection: "column" }}>
                     <MoreResources />
                   </Paper>

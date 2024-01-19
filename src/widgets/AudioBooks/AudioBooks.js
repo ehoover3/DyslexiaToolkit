@@ -128,7 +128,7 @@ export default function AudioBooks() {
     <React.Fragment>
       <h2>Audio Books on YouTube</h2>
       <div>
-        <button className='AudioBooksButton' onClick={() => handleSort("title")}>
+        <button className='AudioBooksButton AudioBooksButton_Left' onClick={() => handleSort("title")}>
           Sort by Title
         </button>
         <button className='AudioBooksButton' onClick={() => handleSort("author")}>

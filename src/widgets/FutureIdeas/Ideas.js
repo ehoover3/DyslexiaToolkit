@@ -3,8 +3,9 @@ import * as React from "react";
 export default function MoreResources() {
   return (
     <React.Fragment>
-      <h1>Ideas </h1>
+      <h2>How to Improve Accessibility</h2>
       <ol>
+        <li>All school textbooks should be offered in a dyslexic friendly font.</li>
         <li>Microsoft Word & Apple Pages should offer Open Dyslexic Font or another dyslexic font by default</li>
         <li>All government websites should be required to click a button that enables Open Dyslexic Font</li>
 
