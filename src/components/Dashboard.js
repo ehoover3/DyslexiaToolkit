@@ -1,4 +1,5 @@
 import * as React from "react";
+import { useEffect } from "react";
 import { createTheme, styled, ThemeProvider } from "@mui/material/styles";
 import { indigo } from "@mui/material/colors";
 import AudioBooks from "../widgets/AudioBooks/AudioBooks";
@@ -74,8 +75,15 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== "open" 
 }));
 
 export default function Dashboard() {
-  const [activeSection, setActiveSection] = React.useState("PdfMaker");
+  const [activeSection, setActiveSection] = React.useState("ReadingTools");
   const [open, setOpen] = React.useState(true);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setOpen(window.innerWidth > 412);
+    };
+    handleResize();
+  }, []);
 
   const buttonOnHover = {
     "&:hover": {
@@ -128,7 +136,7 @@ export default function Dashboard() {
                   onClick={toggleDrawer}
                   sx={{
                     color: "white",
-                    marginRight: "36px",
+                    // marginRight: "36px",
                     ...(open && { display: "none" }),
                   }}>
                   <MenuIcon />

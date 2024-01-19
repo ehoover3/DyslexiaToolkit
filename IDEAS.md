@@ -3,15 +3,17 @@
 - Create warnings before leaving the website
 - Create terms of use section
 
-# 1. Create a dyslexic friendly font book library
+# 2. Add Book PDFs in Dyslexic Font
 
-- Public domain books located here https://www.gutenberg.org
+- Change "Audio Books" tab to "Books"
+- Create a tab for "Audio Books" and for "Dyslexic Font Books"
+- Public domain books https://www.gutenberg.org
 - Download as a PDF
+
+# 3. Add Screen Reader to Reading Tools
 
 # 2. Upgrade Audio Books
 
-- Sort by Title
-- Sort by Author
 - Add Audio Books to the List
 
 # 5. AudioBooks Create YouTube Series
