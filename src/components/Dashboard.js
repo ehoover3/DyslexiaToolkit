@@ -28,6 +28,7 @@ import PictureAsPdfIcon from "@mui/icons-material/PictureAsPdf";
 import Simulation from "../widgets/HowItWorks/Simulation";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
+import ScreenReader from "../widgets/ReadingTools/ScreenReader";
 
 const theme = createTheme({
   palette: {
@@ -194,6 +195,10 @@ export default function Dashboard() {
                   <br />
                   <Paper sx={{ p: 2, display: "flex", flexDirection: "column" }}>
                     <HelperBird />
+                  </Paper>
+                  <br />
+                  <Paper sx={{ p: 2, display: "flex", flexDirection: "column" }}>
+                    <ScreenReader />
                   </Paper>
                 </Grid>
               )}

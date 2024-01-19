@@ -19,16 +19,22 @@ function HelperBird() {
         </li>
         <br />
         <li style={{ listStyleType: "none", display: "flex" }}>
-          <img
-            src='images/HelperBirdOff.png'
-            alt='Example of a website with Helper Bird turned off'
-            style={{ width: "50%", height: "100%", outline: "3px solid #e0e0e0" }}
-          />
-          <img
-            src='images/HelperBirdOn.png'
-            alt='Example of a website with Helper Bird turned on'
-            style={{ width: "50%", height: "100%", outline: "3px solid #e0e0e0" }}
-          />
+          <div style={{ display: "flex", flexDirection: "column", width: "50%" }}>
+            <div style={{ textAlign: "center", fontWeight: "bold" }}>Standard</div>
+            <img
+              src='images/HelperBirdOff.png'
+              alt='Example of a website with Helper Bird turned off'
+              style={{ width: "100%", height: "100%", outline: "3px solid #e0e0e0" }}
+            />
+          </div>
+          <div style={{ display: "flex", flexDirection: "column", width: "50%" }}>
+            <div style={{ textAlign: "center", fontWeight: "bold" }}>Helper Bird</div>
+            <img
+              src='images/HelperBirdOn.png'
+              alt='Example of a website with Helper Bird turned on'
+              style={{ width: "100%", height: "100%", outline: "3px solid #e0e0e0" }}
+            />
+          </div>
         </li>
       </ul>
     </div>

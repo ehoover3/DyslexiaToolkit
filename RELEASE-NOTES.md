@@ -1,3 +1,11 @@
+# Version 1.8.0 Release Notes
+
+Released January 18, 2024
+
+1. Added screen readers
+
+# ----------------------------------------------------------
+
 # Version 1.7.0 Release Notes
 
 Released January 14, 2024
