@@ -4,13 +4,13 @@ export default function HowItWorks() {
   return (
     <React.Fragment>
       <h2>1. Dyslexia Rotates</h2>
+      <div>
+        <img src='/gifs/gif1.gif' alt='Rotating Cup' className='rotationImg' />
+        <img src='/gifs/gif2.gif' alt='Rotating Letter' className='rotationImg' />
+      </div>
       <ul>
-        <li>People with dyslexia process information differently</li>
-        <li>Objects in their mind rotate in 3d space, including letters</li>
-        <li style={{ listStyleType: "none" }}>
-          <img src='/gifs/gif1.gif' alt='Rotating Cup' style={{ width: "240px", height: "auto" }} />
-          <img src='/gifs/gif2.gif' alt='Rotating Letter' style={{ width: "240px", height: "auto" }} />{" "}
-        </li>
+        <li>People with dyslexia mentally rotate objects and letters</li>
+        <li>This makes it more difficult to read</li>
       </ul>
     </React.Fragment>
   );

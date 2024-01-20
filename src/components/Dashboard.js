@@ -76,7 +76,7 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== "open" 
 }));
 
 export default function Dashboard() {
-  const [activeSection, setActiveSection] = React.useState("ReadingTools");
+  const [activeSection, setActiveSection] = React.useState("HowItWorks");
   const [open, setOpen] = React.useState(true);
 
   useEffect(() => {

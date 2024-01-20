@@ -5,24 +5,25 @@ export default function DyslexicFont() {
     <React.Fragment>
       <h2>1. Open Dyslexic Font</h2>
 
+      <img
+        src='images/font.png'
+        alt='The letters ABC in dyslexic friendly font'
+        style={{ width: "100%", padding: "5px", border: "3px solid #424242", backgroundColor: "#EEEEEE", borderRadius: "5px", height: "auto" }}
+      />
       <ul>
-        <li>This font weights the bottom of letters to reduce letter rotation</li>
-        <li>This makes reading easier for people with dyslexia</li>
+        <li style={{ listStyleType: "none" }}></li>
+        <li>Open Dyslexic Font is made for people with dyslexia</li>
+        {/* <li>Add thickness to the bottom of letters, so that letters rotate less.</li> */}
+        <li>Letters rotate less when the lower half of letters is thicker.</li>
+        <li>You can add this font to Microsoft Word, Apple Pages, and more.</li>
         <li>
-          Download{" "}
+          Download the font at{" "}
           <a href='https://opendyslexic.org' target='_blank' rel='noopener noreferrer'>
-            Open Dyslexic Font
+            https://opendyslexic.org
           </a>
         </li>
         <br />
-        <li style={{ listStyleType: "none" }}>
-          <img src='images/font.png' alt='The letters ABC in dyslexic friendly font' style={{ width: "50%", height: "auto" }} />
-        </li>
       </ul>
-
-      <div></div>
-      <div style={{ textAlign: "center" }}></div>
-      <div></div>
     </React.Fragment>
   );
 }

@@ -1,3 +1,11 @@
+# Version 1.9.0 Release Notes
+
+Released January 20, 2024
+
+1. Improved the widgets wording and images
+
+# ----------------------------------------------------------
+
 # Version 1.8.0 Release Notes
 
 Released January 18, 2024

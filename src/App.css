@@ -56,6 +56,11 @@
   padding: 20px;
 }
 
+.rotationImg {
+  width: 50%;
+  height: auto;
+}
+
 h1 {
   color: #333;
 }
