@@ -5,7 +5,7 @@ function HelperBird() {
     <div>
       <h2>2. Helper Bird</h2>
 
-      <div style={{ listStyleType: "none", display: "flex" }}>
+      {/* <div style={{ listStyleType: "none", display: "flex" }}>
         <div style={{ display: "flex", flexDirection: "column", width: "50%", paddingRight: "5px" }}>
           <div style={{ textAlign: "center", fontWeight: "bold" }}>Standard</div>
           <div
@@ -29,7 +29,7 @@ function HelperBird() {
             This is an example of how Helper Bird changes font.
           </div>
         </div>
-      </div>
+      </div> */}
 
       <ul>
         <li>Helper Bird changes all websites font to Open Dyslexic Font</li>
