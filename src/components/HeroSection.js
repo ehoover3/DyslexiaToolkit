@@ -14,7 +14,7 @@ function HeroSection() {
         <Button className='btns' buttonStyle='btn--outline' buttonSize='btn--large'>
           EXPLORE TOOLS
         </Button>
-        <Button className='btns' buttonStyle='btn--primary' buttonSize='btn--large' onClick={console.log("hey")}>
+        <Button className='btns' buttonStyle='btn--primary' buttonSize='btn--large'>
           CONTACT US
         </Button>
       </div>

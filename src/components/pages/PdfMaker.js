@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import jsPDF from "jspdf";
-// import "../App.css";
 
 const PdfMaker = () => {
   const [text, setText] = useState("Enter text here");
