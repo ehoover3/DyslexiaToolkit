@@ -20,24 +20,24 @@ import clsx from 'clsx';
 const links = [
   { name: 'Home', href: '/dashboard', icon: HomeIcon },
   {
-    name: 'Invoices',
+    name: 'Dyslexia Simulation',
     href: '/dashboard/invoices',
-    icon: DocumentDuplicateIcon,
+    icon: BeakerIcon,
   },
   {
-    name: 'Careers',
+    name: 'Screen Reader',
     href: '/dashboard/careers',
-    icon: WrenchScrewdriverIcon,
+    icon: SpeakerWaveIcon,
   },
   {
-    name: 'Colleges',
+    name: 'Audio Books',
     href: '/dashboard/colleges',
-    icon: AcademicCapIcon,
+    icon: PlayCircleIcon,
   },
   {
-    name: 'Plan',
+    name: 'Dyslexic Friendly Font',
     href: '/dashboard/plan',
-    icon: CurrencyDollarIcon,
+    icon: HeartIcon,
   },
 ];
 
