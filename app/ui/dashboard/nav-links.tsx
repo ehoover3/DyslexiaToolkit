@@ -5,11 +5,7 @@ import {
   BeakerIcon,
   PlayCircleIcon,
   SpeakerWaveIcon,
-  HeartIcon,
-  DocumentDuplicateIcon,
-  WrenchScrewdriverIcon,
-  AcademicCapIcon,
-  CurrencyDollarIcon,
+  ChatBubbleLeftEllipsisIcon,
 } from '@heroicons/react/24/outline';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -21,23 +17,23 @@ const links = [
   { name: 'Home', href: '/dashboard', icon: HomeIcon },
   {
     name: 'Dyslexia Simulation',
-    href: '/dashboard/invoices',
+    href: '/dashboard/dyslexiasimulation',
     icon: BeakerIcon,
   },
   {
     name: 'Screen Reader',
-    href: '/dashboard/careers',
+    href: '/dashboard/screenreader',
     icon: SpeakerWaveIcon,
   },
   {
     name: 'Audio Books',
-    href: '/dashboard/colleges',
+    href: '/dashboard/audiobooks',
     icon: PlayCircleIcon,
   },
   {
-    name: 'Dyslexic Friendly Font',
-    href: '/dashboard/plan',
-    icon: HeartIcon,
+    name: 'Font Choice',
+    href: '/dashboard/fontchoice',
+    icon: ChatBubbleLeftEllipsisIcon,
   },
 ];
 

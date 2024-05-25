@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import PlanForm from '@/app/ui/plan/plan-form';
+import PlanForm from '@/app/ui/fontchoice/plan-form';
 import { fetchFilteredCareers, fetchFilteredColleges } from '@/app/lib/data';
 
 export const metadata: Metadata = {

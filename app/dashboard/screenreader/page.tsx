@@ -1,7 +1,7 @@
-import Pagination from '@/app/ui/careers/pagination';
+import Pagination from '@/app/ui/screenreader/pagination';
 import Search from '@/app/ui/search';
-import Table from '@/app/ui/careers/table';
-import { SetFilter } from '@/app/ui/careers/buttons';
+import Table from '@/app/ui/screenreader/table';
+import { SetFilter } from '@/app/ui/screenreader/buttons';
 import { lusitana } from '@/app/ui/fonts';
 import { InvoicesTableSkeleton } from '@/app/ui/skeletons';
 import { Suspense } from 'react';

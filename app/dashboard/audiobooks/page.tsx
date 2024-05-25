@@ -1,6 +1,6 @@
-import Pagination from '@/app/ui/colleges/pagination';
+import Pagination from '@/app/ui/audiobooks/pagination';
 import Search from '@/app/ui/search';
-import Table from '@/app/ui/colleges/table';
+import Table from '@/app/ui/audiobooks/table';
 import { lusitana } from '@/app/ui/fonts';
 import { InvoicesTableSkeleton } from '@/app/ui/skeletons';
 import { Suspense } from 'react';
