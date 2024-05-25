@@ -1,4 +1,3 @@
-import { Card } from '@/app/ui/dashboard/cards';
 import HighlightedCareers from '@/app/ui/dashboard/highlighted-careers';
 import ExamplePlans from '@/app/ui/dashboard/example-plans';
 import { lusitana } from '@/app/ui/fonts';
