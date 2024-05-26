@@ -1,7 +1,6 @@
-import HighlightedCareers from '@/app/ui/dashboard/highlighted-careers';
-import ExamplePlans from '@/app/ui/dashboard/example-plans';
+import DyslexiaSimulationCard from '@/app/ui/dashboard/dylexia-simulation';
+import OpenDyslexicFontCard from '@/app/ui/dashboard/open-dyslexic-font';
 import { lusitana } from '@/app/ui/fonts';
-import { fetchCardData } from '@/app/lib/data';
 import { Suspense } from 'react';
 import CardWrapper from '@/app/ui/dashboard/cards';
 
@@ -12,13 +11,6 @@ import {
 } from '@/app/ui/skeletons';
 
 export default async function Page() {
-  const {
-    numberOfInvoices,
-    numberOfCustomers,
-    totalPaidInvoices,
-    totalPendingInvoices,
-  } = await fetchCardData();
-
   return (
     <main>
       <h1 className={`${lusitana.className} mb-4 text-xl md:text-2xl`}>
@@ -31,10 +23,10 @@ export default async function Page() {
       </div>
       <div className="mt-6 grid grid-cols-1 gap-6 md:grid-cols-4 lg:grid-cols-8">
         <Suspense fallback={<RevenueChartSkeleton />}>
-          <HighlightedCareers />
+          <DyslexiaSimulationCard />
         </Suspense>
         <Suspense fallback={<LatestInvoicesSkeleton />}>
-          <ExamplePlans />
+          <OpenDyslexicFontCard />
         </Suspense>
       </div>
     </main>

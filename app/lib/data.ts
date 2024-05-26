@@ -13,18 +13,6 @@ import {
 import { formatCurrencyToNearestCent } from './utils';
 import { unstable_noStore as noStore } from 'next/cache';
 
-export async function fetchRevenue() {
-  // Add noStore() prevents response from being cached.
-  noStore();
-  try {
-    const data = await sql<Revenue>`SELECT * FROM revenue`;
-    return data.rows;
-  } catch (error) {
-    console.error('Database Error:', error);
-    throw new Error('Failed to fetch revenue data.');
-  }
-}
-
 export async function fetchLatestInvoices() {
   noStore();
   try {
