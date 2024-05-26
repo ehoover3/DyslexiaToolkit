@@ -7,11 +7,11 @@
 // }
 //
 
-import DyslexiaSimulationCard from '@/app/ui/dashboard/dylexia-simulation';
-import OpenDyslexicFontCard from '@/app/ui/dashboard/open-dyslexic-font';
+import DyslexiaSimulationCard from '@/app/ui/home/dylexia-simulation';
+import OpenDyslexicFontCard from '@/app/ui/home/open-dyslexic-font';
 import { lusitana } from '@/app/ui/fonts';
 import { Suspense } from 'react';
-import CardWrapper from '@/app/ui/dashboard/cards';
+import CardWrapper from '@/app/ui/home/cards';
 
 import {
   RevenueChartSkeleton,

@@ -44,7 +44,7 @@
 import '@/app/ui/global.css';
 import { inter } from '@/app/ui/fonts';
 import { Metadata } from 'next';
-import SideNav from '@/app/ui/dashboard/sidenav';
+import SideNav from '@/app/ui/home/sidenav';
 
 export const metadata: Metadata = {
   title: {
