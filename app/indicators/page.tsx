@@ -12,8 +12,8 @@ export default async function Page() {
         <h1 className={`${lusitana.className} text-2xl`}>Indicators</h1>
       </div>
       <div>
-        If a child has 3 ore more of the following, encourage that child&apos;s
-        parents and teachers to learn more about dyslexia.
+        If a child has 3 or more of the following, encourage the parents and
+        teachers to learn more about dyslexia.
       </div>
       <ol>
         <li style={{ fontWeight: 'bold' }}>In Preschool</li>
@@ -38,13 +38,13 @@ export default async function Page() {
         <li>extreme difficulty learning cursive</li>
         <li>
           slow, choppy, inaccurate reading: guesses based on shape or context,
-          skips or misreads prepositions (at, to of), ignores suffixes,
-          can&apos;t sound out unknown words
+          skips or misreads prepositions (at, to of), ignores suffixes, cannot
+          sound out unknown words
         </li>
         <li>terrible spelling</li>
         <li>
-          often cannot remember sight words (they, were does) or homonyms
-          (their, they&apos;re, and there)
+          often cannot remember sight words (they, were does) or homonyms (i.e.
+          their, there)
         </li>
         <li>difficulty telling time with a clock with hands</li>
         <li>
@@ -53,7 +53,7 @@ export default async function Page() {
         </li>
         <li>
           when speaking, difficulty finding the correct word: lots of
-          "whatyamacallits" and "thingies", common sayings come out slightly
+          what-ya-ma-call-its and thingies, common sayings come out slightly
           twisted
         </li>
         <li>extremely mess bedroom, backpack, and desk</li>
