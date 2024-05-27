@@ -2,24 +2,31 @@
 
 import React, { useState } from 'react';
 import { lusitana } from '@/app/ui/fonts';
-import { AudioBooks } from '@/app/lib/definitions';
+import { AudioBook } from '@/app/lib/definitions';
 import { getAudioBooks } from '@/app/lib/data';
 import Modal from './modal';
+import Search from './search';
 
 export default function Table() {
   const books = getAudioBooks();
-  const [selectedBook, setSelectedBook] = useState<AudioBooks | null>(null);
+  const [selectedBook, setSelectedBook] = useState<AudioBook | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [filteredBooks, setFilteredBooks] = useState(books);
 
-  const handleBookClick = (book: AudioBooks) => {
+  const handleBookClick = (book: AudioBook) => {
     setSelectedBook(book);
     setIsModalOpen(true);
   };
 
-  const handleConfirm = () => {
-    if (selectedBook) {
-      window.location.href = selectedBook.url;
-    }
+  const handleSearch = (query: string) => {
+    if (query === '') setFilteredBooks(books);
+    const lowerCaseQuery = query.toLowerCase();
+    let filteredBooks = books.filter(
+      (book: AudioBook) =>
+        book.title.toLowerCase().includes(lowerCaseQuery) ||
+        book.author.toLowerCase().includes(lowerCaseQuery),
+    );
+    setFilteredBooks(filteredBooks);
   };
 
   return (
@@ -27,13 +34,13 @@ export default function Table() {
       <h1 className={`${lusitana.className} mb-8 text-xl lg:text-2xl`}>
         Audio Books
       </h1>
-      {/* <Search placeholder="Search customers..." /> */}
+      <Search placeholder="Search audio books..." handleSearch={handleSearch} />
       <div className="mt-6 flow-root">
         <div className="overflow-x-auto">
           <div className="inline-block min-w-full align-middle">
             <div className="overflow-hidden rounded-md bg-gray-50 p-2 lg:pt-0">
               <div className="lg:hidden">
-                {books?.map((book) => (
+                {filteredBooks?.map((book) => (
                   <div
                     key={book.id}
                     className="mb-2 w-full cursor-pointer rounded-md bg-white p-4 hover:bg-blue-200"
@@ -65,7 +72,7 @@ export default function Table() {
                 </thead>
 
                 <tbody className="divide-y divide-gray-200 text-gray-900">
-                  {books.map((book) => (
+                  {filteredBooks.map((book) => (
                     <tr
                       key={book.id}
                       className="group cursor-pointer bg-white hover:bg-blue-200"

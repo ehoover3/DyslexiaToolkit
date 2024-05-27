@@ -1,4 +1,4 @@
-export type AudioBooks = {
+export type AudioBook = {
   id: string;
   url: string;
   title: string;

@@ -1,10 +1,10 @@
 'use client';
 
 import React from 'react';
-import { AudioBooks } from '@/app/lib/definitions';
+import { AudioBook } from '@/app/lib/definitions';
 
 interface ModalProps {
-  selectedBook: AudioBooks;
+  selectedBook: AudioBook;
   setIsModalOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
