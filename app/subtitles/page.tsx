@@ -1,17 +1,15 @@
+import { lusitana } from '@/app/ui/fonts';
 import { Metadata } from 'next';
-import Table from '@/app/ui/audiobooks/table';
 
 export const metadata: Metadata = {
-  title: 'Audio Books',
+  title: 'Careers',
 };
 
 export default async function Page() {
   return (
     <div className="w-full">
       <div className="flex w-full items-center justify-between">
-        <main>
-          <Table />
-        </main>
+        <h1 className={`${lusitana.className} text-2xl`}>Subtitles</h1>
       </div>
     </div>
   );

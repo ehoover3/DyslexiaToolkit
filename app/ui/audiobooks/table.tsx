@@ -3,8 +3,10 @@
 import React, { useState } from 'react';
 import { lusitana } from '@/app/ui/fonts';
 import { AudioBooks } from '@/app/lib/definitions';
+import { getAudioBooks } from '@/app/lib/data';
 
-export default function Table({ books }: { books: AudioBooks[] }) {
+export default function Table() {
+  const books = getAudioBooks();
   const [selectedBook, setSelectedBook] = useState<AudioBooks | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
