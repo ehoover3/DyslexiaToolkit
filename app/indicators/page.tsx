@@ -12,7 +12,7 @@ export default async function Page() {
         <h1 className={`${lusitana.className} text-2xl`}>Indicators</h1>
       </div>
       <div>
-        If a child has 3 ore more of the following, encourage that child's
+        If a child has 3 ore more of the following, encourage that child&apos;s
         parents and teachers to learn more about dyslexia.
       </div>
       <ol>
@@ -25,7 +25,7 @@ export default async function Page() {
         <li>late establishing a dominant hand</li>
         <li>difficulty learning to tie shoes</li>
         <li>trouble memorizing their address, phone number, or the alphabet</li>
-        <li>can't create words that rhyme</li>
+        <li>cannot create words that rhyme</li>
         <li>a close relative with dyslexia</li>
 
         <li style={{ fontWeight: 'bold' }}>In Elementary School</li>
@@ -38,13 +38,13 @@ export default async function Page() {
         <li>extreme difficulty learning cursive</li>
         <li>
           slow, choppy, inaccurate reading: guesses based on shape or context,
-          skips or misreads prepositions (at, to of), ignores suffixes, can't
-          sound out unknown words
+          skips or misreads prepositions (at, to of), ignores suffixes,
+          can&apos;t sound out unknown words
         </li>
         <li>terrible spelling</li>
         <li>
-          often can't remember sight words (they, were does) or homonyms (their,
-          they're, and there)
+          often cannot remember sight words (they, were does) or homonyms
+          (their, they&apos;re, and there)
         </li>
         <li>difficulty telling time with a clock with hands</li>
         <li>
