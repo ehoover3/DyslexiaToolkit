@@ -7,6 +7,7 @@ import {
   PlayCircleIcon,
   SpeakerWaveIcon,
   ChatBubbleLeftEllipsisIcon,
+  EllipsisHorizontalIcon,
 } from '@heroicons/react/24/outline';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -44,7 +45,7 @@ const links = [
   {
     name: 'Subtitles',
     href: '/subtitles',
-    icon: ChatBubbleLeftEllipsisIcon,
+    icon: EllipsisHorizontalIcon,
   },
 ];
 
