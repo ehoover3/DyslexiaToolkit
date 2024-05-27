@@ -1,4 +1,3 @@
-import { lusitana } from '@/app/ui/fonts';
 import { Metadata } from 'next';
 import Table from '@/app/ui/audiobooks/table';
 

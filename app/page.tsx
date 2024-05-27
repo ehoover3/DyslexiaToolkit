@@ -1,12 +1,3 @@
-// export default function Page() {
-//   return (
-//     <main className="flex min-h-screen flex-col p-6">
-//       delete this page - remove authentication
-//     </main>
-//   );
-// }
-//
-
 import DyslexiaSimulationCard from '@/app/ui/home/dylexia-simulation';
 import OpenDyslexicFontCard from '@/app/ui/home/open-dyslexic-font';
 import { lusitana } from '@/app/ui/fonts';
