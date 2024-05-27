@@ -2,7 +2,7 @@ import { lusitana } from '@/app/ui/fonts';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Invoices',
+  title: 'Dyslexia Simulation',
 };
 
 export default async function Page() {

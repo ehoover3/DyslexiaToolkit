@@ -2,6 +2,7 @@
 
 import {
   HomeIcon,
+  MagnifyingGlassIcon,
   BeakerIcon,
   PlayCircleIcon,
   SpeakerWaveIcon,
@@ -15,6 +16,11 @@ import clsx from 'clsx';
 // Depending on the size of the application, this would be stored in a database.
 const links = [
   { name: 'Home', href: '/', icon: HomeIcon },
+  {
+    name: 'Indicators',
+    href: '/indicators',
+    icon: MagnifyingGlassIcon,
+  },
   {
     name: 'Dyslexia Simulation',
     href: '/dyslexiasimulation',
@@ -33,6 +39,11 @@ const links = [
   {
     name: 'Font Choice',
     href: '/fontchoice',
+    icon: ChatBubbleLeftEllipsisIcon,
+  },
+  {
+    name: 'Subtitles',
+    href: '/subtitles',
     icon: ChatBubbleLeftEllipsisIcon,
   },
 ];
