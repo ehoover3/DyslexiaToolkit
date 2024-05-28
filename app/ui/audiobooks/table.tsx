@@ -6,12 +6,17 @@ import { AudioBook } from '@/app/lib/definitions';
 import { getAudioBooks } from '@/app/lib/data';
 import Modal from './modal';
 import Search from './search';
+import Pagination from './pagination';
 
 export default function Table() {
   const books = getAudioBooks();
   const [selectedBook, setSelectedBook] = useState<AudioBook | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [filteredBooks, setFilteredBooks] = useState(books);
+  const [currentPage, setCurrentPage] = useState(1);
+
+  const BOOKS_PER_PAGE = 25;
+  const totalPages = Math.ceil(books.length / BOOKS_PER_PAGE);
 
   const handleBookClick = (book: AudioBook) => {
     setSelectedBook(book);
@@ -19,15 +24,26 @@ export default function Table() {
   };
 
   const handleSearch = (query: string) => {
-    if (query === '') setFilteredBooks(books);
-    const lowerCaseQuery = query.toLowerCase();
-    let filteredBooks = books.filter(
-      (book: AudioBook) =>
-        book.title.toLowerCase().includes(lowerCaseQuery) ||
-        book.author.toLowerCase().includes(lowerCaseQuery),
-    );
-    setFilteredBooks(filteredBooks);
+    if (query === '') {
+      setFilteredBooks(books);
+      setCurrentPage(1);
+    } else {
+      const lowerCaseQuery = query.toLowerCase();
+      let filteredBooks = books.filter(
+        (book: AudioBook) =>
+          book.title.toLowerCase().includes(lowerCaseQuery) ||
+          book.author.toLowerCase().includes(lowerCaseQuery),
+      );
+      setFilteredBooks(filteredBooks);
+      setCurrentPage(1);
+    }
   };
+
+  const startIndex = (currentPage - 1) * BOOKS_PER_PAGE;
+  const paginatedBooks = filteredBooks.slice(
+    startIndex,
+    startIndex + BOOKS_PER_PAGE,
+  );
 
   return (
     <div className="w-full">
@@ -40,10 +56,11 @@ export default function Table() {
           <div className="inline-block min-w-full align-middle">
             <div className="overflow-hidden rounded-md bg-gray-50 p-2 lg:pt-0">
               <div className="lg:hidden">
-                {filteredBooks?.map((book) => (
+                {paginatedBooks.map((book) => (
                   <div
                     key={book.id}
                     className="mb-2 w-full cursor-pointer rounded-md bg-white p-4 hover:bg-blue-200"
+                    onClick={() => handleBookClick(book)}
                   >
                     <div className="flex w-full items-center justify-between">
                       <div className="flex w-1/2 flex-col">
@@ -72,7 +89,7 @@ export default function Table() {
                 </thead>
 
                 <tbody className="divide-y divide-gray-200 text-gray-900">
-                  {filteredBooks.map((book) => (
+                  {paginatedBooks.map((book) => (
                     <tr
                       key={book.id}
                       className="group cursor-pointer bg-white hover:bg-blue-200"
@@ -91,6 +108,11 @@ export default function Table() {
             </div>
           </div>
         </div>
+        <Pagination
+          currentPage={currentPage}
+          totalPages={totalPages}
+          onPageChange={setCurrentPage}
+        />
       </div>
       {isModalOpen && selectedBook && (
         <Modal selectedBook={selectedBook} setIsModalOpen={setIsModalOpen} />
